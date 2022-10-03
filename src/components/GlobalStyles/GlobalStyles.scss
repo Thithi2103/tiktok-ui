@@ -5,6 +5,8 @@
     --primary: #fe2c55;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --color-letter:  rgba(22, 24, 35, 1);
+    --text-color: #333;
 }
 
 * {
@@ -22,4 +24,16 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
+    color: var(--text-color)
+
+}
+
+button, input, [tabindex] {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
