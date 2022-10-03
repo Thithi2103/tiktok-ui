@@ -1,9 +1,7 @@
 import './GlobalStyles.scss'
 
-function Content () {
-    return (
-        <h1>Hello</h1>
-    )
+function Content ({children}) {
+    return children
 }
 
 export default Content

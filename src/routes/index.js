@@ -11,7 +11,7 @@ import Search from '../pages/Search';
 // publicRoutes
 const publicRoutes = [
     {
-        path: '/home',
+        path: '/',
         component: Home,
     },
     {
