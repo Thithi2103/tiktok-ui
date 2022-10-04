@@ -20,9 +20,19 @@
 .logo {
 }
 
+.search-title {
+    font-size: 1.4rem;
+    font-weight: 600px;
+    color: rgba(22, 24, 35, 0.5);
+    padding: 5px 12px;
+}
+
+.search, .search-result {
+    width: 361px;
+}
+
 .search {
     position: relative;
-    width: 361px;
     height: 52px;
     padding-left: 16px;
     background: rgba(22, 24, 35, 0.06);
