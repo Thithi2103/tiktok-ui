@@ -1,4 +1,7 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.6rem;
     font-weight: 700;
     min-width: 100px;
@@ -8,6 +11,7 @@
     background-color: var(--white);
     border: 1px solid transparent;
     user-select: none;
+    text-align: center;
 
     + .wrapper {
         margin-left: 8px;
@@ -65,4 +69,15 @@
 .large {
     min-width: 140px;
     padding: 14px 16px;
+}
+
+
+.icon + .title, .title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center ;
 }
