@@ -5,9 +5,10 @@
     --primary: #fe2c55;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
-    --color-letter:  rgba(22, 24, 35, 1);
-    --text-color: #333;
-    --white: #fff
+    --color-letter: rgba(22, 24, 35, 1);
+    --text-color: #161823;
+    --white: #fff;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -25,11 +26,21 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
-    color: var(--text-color)
-
+    color: var(--text-color);
 }
 
-button, input, [tabindex] {
+
+// Fonts emmbeded
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 400;
+}
+
+
+button,
+input,
+[tabindex] {
     border: none;
     outline: none;
 }
@@ -37,4 +48,22 @@ button, input, [tabindex] {
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+body {
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        font-size: 16px;
+        font-weight: 600px;
+        line-height: 2.2rem;
+        border-radius: 8px;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
 }
