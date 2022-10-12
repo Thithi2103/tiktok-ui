@@ -1,8 +1,12 @@
 .wrapper {
+    position: fixed;
     height: var(--default-layout-header-height);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
     display: flex;
+    z-index: 10;
+    width: 100%;
     justify-content: center;
+    background-color: var(--white);
     --search-border-radius: 92px;
     --search-height: 46px;
     --search-top-spacer: 9px;
@@ -20,6 +24,9 @@
 
 .logo {
 }
+.logo-link {
+    display: flex;
+}
 
 .search-title {
     font-size: 1.4rem;
@@ -28,7 +35,8 @@
     padding: 5px 12px;
 }
 
-.search, .search-result {
+.search,
+.search-result {
     width: 361px;
 }
 
@@ -58,28 +66,28 @@
         content: '';
         position: absolute;
         top: var(--search-top-spacer);
-        right: var( --search-button-width);
+        right: var(--search-button-width);
         width: 1px;
-        height: calc(var( --search-height) - var(--search-top-spacer) * 2);
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
         background: rgba(22, 24, 35, 0.12);
     }
 
     &:focus-within {
-        border-color: rgba(22, 24, 35, .2);;
+        border-color: rgba(22, 24, 35, 0.2);
     }
 }
 
 .clear,
 .loading {
     position: absolute;
-    right: calc(var( --search-button-width) + 16px);
+    right: calc(var(--search-button-width) + 16px);
     top: 50%;
     transform: translateY(-50%);
-    color: rgba(22, 24, 35, 0.34);;
+    color: rgba(22, 24, 35, 0.34);
 }
 
 .search-btn {
-    width: var( --search-button-width);
+    width: var(--search-button-width);
     height: 100%;
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
@@ -93,16 +101,15 @@
         background-color: rgba(22, 24, 35, 0.03);
         cursor: pointer;
     }
-    
+
     &:active {
-        background: rgba(22, 24, 35, .06);
+        background: rgba(22, 24, 35, 0.06);
     }
 }
 
 .custom-login {
     color: red;
 }
-
 
 // Actions
 
@@ -140,7 +147,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--white);
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--primary);
 }
 

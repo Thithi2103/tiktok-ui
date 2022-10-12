@@ -20,6 +20,8 @@ import 'tippy.js/dist/tippy.css';
 import Image from '~/components/Image';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -39,6 +41,61 @@ const MENU_ITEMS = [
                     code: 'vi',
                     title: 'Việt Nam',
                 },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                
             ],
         },
     },
@@ -54,7 +111,6 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-
     const currentUser = true;
 
     const handleMenuChange = (menuItem) => {
@@ -93,12 +149,13 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 {/* Logo */}
-                <div className={cx('logo')}>
+
+                <Link to={routesConfig.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Logo" />
-                </div>
+                </Link>
 
                 {/* Search */}
-                <Search/>
+                <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
