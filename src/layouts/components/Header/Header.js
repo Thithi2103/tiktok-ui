@@ -12,16 +12,16 @@ import {
 import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
-import images from '../../../../assets/images';
+import images from '~/assets/images';
 import Tippy from '@tippyjs/react';
-import Button from '../../../Button';
-import Menu from '../../../Popper/Menu';
+import Button from '~/components/Button';
+import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
 import Image from '~/components/Image';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -95,7 +95,6 @@ const MENU_ITEMS = [
                     code: 'vi',
                     title: 'Việt Nam',
                 },
-                
             ],
         },
     },
@@ -150,7 +149,7 @@ function Header() {
             <div className={cx('inner')}>
                 {/* Logo */}
 
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Logo" />
                 </Link>
 
